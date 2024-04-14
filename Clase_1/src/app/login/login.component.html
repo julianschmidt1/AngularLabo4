@@ -1,0 +1,9 @@
+<form class="login-container">
+  <input type="text" (input)="onChange()" name="name" placeholder="Usuario" [(ngModel)]="loginData.name">
+  <input type="text" (input)="onChange()" name="password" placeholder="ContraseÑa" [(ngModel)]="loginData.password">
+  <button (click)="login()">Ingresar</button>
+</form>
+
+<ng-container *ngIf="activeError">
+  <error />
+</ng-container>
